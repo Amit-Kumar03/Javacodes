@@ -1,0 +1,28 @@
+WAP to make a class called Circle. It should have a parameterised constructor to initialize the radius. It should have two methods namely calculate area and display the area.
+
+Program:
+
+import java.util.*;
+
+public class Circle {
+	
+	int radius;
+	double area;
+	Circle(int r){
+		radius=r;
+	}
+void calculateArea() {
+	area=3.14*radius*radius;
+}
+void displayArea() {
+	System.out.println("Area of Circle is "+area);
+}
+	public static void main(String[] args) throws IOException {
+		BufferedReader sc =new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter radius:");
+		int r=Integer.parseInt(sc.readLine());
+		Circle c= new Circle(r);
+		c.calculateArea();
+		c.displayArea();
+	}
+
